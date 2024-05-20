@@ -1,0 +1,174 @@
+::-webkit-scrollbar {
+  width: 7px;
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; 
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+body {
+  background-color: #007BFF; 
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-notes {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  height: 80vh;
+  padding: 20px;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input-group button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+.Note {
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  word-break: break-word; 
+  flex-direction: row;
+}
+
+
+.Note-list {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 65%; 
+  padding: 0;
+  list-style: none;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+
+
+.Note-list .Note {
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Note-list .Note button {
+  background-color: #28A745;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Note.completed {
+  text-decoration: line-through;
+}
+
+.text-description {
+  flex: 1;
+}
+
+.button-group button{
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#trash-icon {
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+}
+
+#trash-icon:hover {
+  color: red;
+  transition: 200ms;
+}
+
+#trash-icon:active {
+  color: darkred;
+  transition: 200ms;
+}
+
+.clipboard-icon {
+    display: block; 
+    margin: 0 auto 5px; 
+    font-size: 48px;
+    color: #007BFF; 
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.input-edit {
+  font-size: 16px; 
+  padding: 8px;
+  margin-right: 10px; 
+  border: none;
+  border-radius: 4px;
+  width: calc(100% - 60px); 
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #F0F0F0; 
+}
+
+.input-edit:focus {
+  outline: none; 
+  border-color: #0056b3; 
+  box-shadow: 0 0 0 2px rgba(0,86,179,0.25); 
+}

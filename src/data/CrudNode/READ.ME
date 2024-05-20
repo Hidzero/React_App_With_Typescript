@@ -1,0 +1,14 @@
+No .env tem so 
+
+MONGODB_URI
+SECRET
+PORT
+
+Foi criado um CRUD padrão para fazer o GET, POST, PUT e DELETE da aplicação
+Apois isso foi criado um usuario padrão pelo metodo POST ja passando uma função de hash na senha
+
+A partir desse post, é necessario mais um POST porem na rota /login para ocorrer a criação do token de acesso
+Apos a criação do token, é nessecario uma alteração no postman para a leitura
+Na aba Authorization é selecionada a opção bearer token e passado o token de ativação criado 
+a biblioteca bcrypt faz a verificação dos dados que chegam pelo body com os dados do banco
+Agora so  enviar os dados do usuario pela rota /private e verificar o seu usuario autenticado

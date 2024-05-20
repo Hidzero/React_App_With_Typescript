@@ -21,6 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "src" // Add "src" directory to the include array
+, "src/index.tsx"  ]
 }
