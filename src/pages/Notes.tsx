@@ -29,6 +29,7 @@ const App: React.FC = () => {
         await axios.post(baseUrl, data)
         .then(response => {
             setNotes([...Notes, { ...data, _id: response.data._id }]);
+            getNotes();
         }).catch(error => {
             console.log(error);
         });
@@ -50,6 +51,7 @@ const App: React.FC = () => {
         .then(() => {
             const updatedNotes = Notes.filter((_, idx) => idx !== index);
             setNotes(updatedNotes);
+            getNotes();
         }).catch(error => {
             console.log(error);
         });
@@ -84,8 +86,9 @@ const App: React.FC = () => {
             await axios.put(baseUrl, updatedNote);
             const updatedNotes = Notes.map((t, idx) => idx === index ? updatedNote : t);
             setNotes(updatedNotes);
-            setEditingIndex(null);  // Sair do modo de edição
+            setEditingIndex(null);
             setEditText('');
+            getNotes();
         } catch (error) {
             console.error("Erro ao salvar as edições:", error);
         }
